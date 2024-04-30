@@ -165,7 +165,7 @@ let cantidad = prompt("¿cuantas colonias quiere?");
 
     } else{
         if(cantidad <= 0){
-            alert("No es posible comprar menos que cero colonias");
+            alert("No es posible comprar menos de cero colonias. :(");
         } else{
             alert(`Disculpe no quedan esa cantidad de colonias. Quedan ${colonias} disponibles`)
         }
