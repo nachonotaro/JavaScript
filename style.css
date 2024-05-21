@@ -20,7 +20,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.img {
+.imgnes {
+    display: flex;
     margin: 35px;
 
 }
@@ -58,4 +59,3 @@ p {
     transition: background-color 0.3s;
     font-weight: bold;
 }
-
