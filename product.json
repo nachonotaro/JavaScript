@@ -1,0 +1,48 @@
+
+  {
+    
+    "productos":  [
+    {
+        "id": 1,
+        "nombre": "Heno",
+        "descripcion": "Laptop de 14 pulgadas con procesador Intel i5",
+        "precio": 750,
+        "stock": 50
+    },
+    {
+        "id": 2,
+        "nombre": "Lavanda",
+        "descripcion": "Smartphone de 6.5 pulgadas con 128GB de almacenamiento",
+        "precio": 500,
+        "stock": 200
+    },
+    {
+        "id": 3,
+        "nombre": "Inglesa",
+        "descripcion": "Auriculares Bluetooth con cancelación de ruido",
+        "precio": 100,
+        "stock": 150
+    },
+    {
+        "id": 4,
+        "nombre": "X",
+        "descripcion": "Monitor 24 pulgadas Full HD",
+        "precio": 180,
+        "stock": 80
+    },
+    {
+        "id": 5,
+        "nombre": "Y",
+        "descripcion": "Teclado mecánico con retroiluminación RGB",
+        "precio": 70,
+        "stock": 120
+    },
+    {
+        "id": 6,
+        "nombre": "Z",
+        "descripcion": "Teclado mecánico con retroiluminación RGB",
+        "precio": 704,
+        "stock": 1200
+    }
+]
+}

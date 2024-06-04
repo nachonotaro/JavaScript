@@ -4,50 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wels</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header ><img src="/JavaScript/imagenes/logo-wels.png" alt=""></header>
-<!--     <div class="container">
-        <h1>Compra de colonias </h1>
-        <h2>Haga click en la imagen de la colonia que desea</h2>
-        <div class="imgnes">
-            <div class="image">
-                <img src="/JavaScript/imagenes/Copia de Colonia Inglesa-min.jpg" alt="" width=250px; height=325px;>
-                <div>
-                <h3>Colonia Inglesa</h3>
-                <p>Descubre nuestra fragancia única: una mezcla cautivadora de elegancia y sofisticación. Cada rociada te transporta a un mundo de lujo y feminidad. ¡Haz que cada día sea memorable con nuestro perfume irresistible!</p>
+    
+
+    <div class="mb-3">
+        <label for="buscador" class="form-label">Buscar Producto:</label>
+        <input type="text" class="form-control" id="buscador" oninput="filtrarProductos()">
+    </div>
+    
+    <div class="container">
+        <div class="row" id="productos-container">
+            <!-- Los productos se renderizaran acá -->
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
+        Abrir modal
+    </button>
+    <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
-            <div class="image">
-                <img src="/JavaScript/imagenes/Copia de Colonia Heno-min.jpg" alt="" width=250px; height=325px;>
-                <div>
-                <h3>Colonia Heno</h3>
-                <p>Descubre nuestra fragancia única: una mezcla cautivadora de elegancia y sofisticación. Cada rociada te transporta a un mundo de lujo y feminidad. ¡Haz que cada día sea memorable con nuestro perfume irresistible!</p>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio Unitario</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody id="carrito-body">
+                                <!-- contenido carrito -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
-            <div class="image">
-                <img src="/JavaScript/imagenes/Copia de Colonia Lavanda-min.jpg" alt=""width=250px; height=325px;>
-                <div>
-                    <h3>Colonia Lavanda</h3>
-                    <p>Descubre nuestra fragancia única: una mezcla cautivadora de elegancia y sofisticación. Cada rociada te transporta a un mundo de lujo y feminidad. ¡Haz que cada día sea memorable con nuestro perfume irresistible!</p>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Seguir Comprando</button>
+                    <button type="button" class="btn btn-primary">Realizar Compra</button>
                 </div>
             </div>
         </div>
-        <p>Cantidad de colonias disponibles: 
-                <span id="colonias" class="numero">50</span>
-        </p>
-        <div class="comprar">
-            <button onclick="coloniasEnVenta()">COMPRAR</button>
-        </div>
-        <div class="product-list">
-            <h2>Productos Seleccionados</h2>
-            <ul id="selected-products"></ul>
-            <button onclick="filtrarProductos()">Comprar</button>
-        </div>
-    </div>   -->
-    <h1>Estoy trabajando para que funcione todo en conjunto, pero esta es una muestra de a donde quiero llegar. Utilizando las imagenes de las colonias</h1>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
