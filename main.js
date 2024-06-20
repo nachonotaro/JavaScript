@@ -1,39 +1,33 @@
+ // actualizacion a fetch
+fetch('product.json')
+.then((response)=>response.json())
+.then(data => { 
 
-async function obtenerProductos() {
-    try {
-        const response = await fetch('product.json'); // Reemplaza con la ruta correcta al archivo JSON
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const productos = await response.json();
-        renderizarProductos(productos.productos);
+const productos = data.productos
+const contenedorProductos = document.getElementById('productos-container')
 
-    } catch (error) {
-        console.error('Error al obtener los productos:', error);
-    }
-}
+productos.forEach(producto => {
+    const productoDiv = document.createElement('div');
+    productoDiv.className = 'col-md-4';
 
-function renderizarProductos(productos) {
-    const contenedorProductos = document.getElementById('productos-container');
-
-    productos.forEach(producto => {
-        const productoDiv = document.createElement('div');
-        productoDiv.className = 'col-md-4';
-
-        productoDiv.innerHTML = `
-            <div class="card mb.4 shado2-sm">
-                <div class="card-body">
-                    <h5 class="card-title">${producto.nombre}</h5>
-                    <p class="card-text">${producto.descripcion}</p>
-                    <p class="card-text"><strong>Precio: $${producto.precio.toFixed(2)}</strong></p>
-                    <p class="card-text">Cantidad en stock: ${producto.stock}</p>
-                    <button class="btn btn-success" onclick="agregarAlCarrito('${producto.nombre}' , ${producto.precio})">Agregar al carrito</button>
-                </div>
+    productoDiv.innerHTML = `
+        <div class="card mb.4 shado2-sm" style="max-width: 18rem;">
+        <img src="${producto.img}" class="card-img-top" >    
+        <div class="card-body">
+                <h5 class="card-title" >${producto.nombre}</h5>
+                <p class="card-text">${producto.descripcion}</p>
+                <p class="card-text"><strong>Precio: $${producto.precio.toFixed(2)}</strong></p>
+                <p class="card-text">Cantidad en stock: ${producto.stock}</p>
+                <button class="btn btn-success" onclick="agregarAlCarrito('${producto.nombre}' , ${producto.precio})">Agregar al carrito</button>
             </div>
-        `;
-        contenedorProductos.appendChild(productoDiv);
-    });
-}
+        </div>
+    `;
+    contenedorProductos.appendChild(productoDiv);
+});
+
+}).catch((error)=>{
+    console.error("No renderiza")
+})
 
 let carrito = [];
 
@@ -88,10 +82,11 @@ function realizarCompra(){
 
     actualizarContenidoCarrito();
 }
-document.querySelector('#miModal .modal-footer .btn-primary').addEventListener('click', realizarCompra);
+document.querySelector('#miModal .modal-footer .btn-primary').addEventListener('click', function() {
+    setTimeout(realizarCompra, 3000); // 3000 milisegundos = 3 segundos
+});
 
 
-//Lo estoy configuradno todavia
 carrito = obtenerCarritoDesdeLocalStorage();
 obtenerProductos();
 actualizarContenidoCarrito();
@@ -110,3 +105,4 @@ function filtrarProducto(){
     });
 
 }
+

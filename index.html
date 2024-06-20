@@ -15,15 +15,15 @@
 
     <div class="mb-3">
         <label for="buscador" class="form-label">Buscar Producto:</label>
-        <input type="text" class="form-control" id="buscador" oninput="filtrarProductos()">
+        <input type="text" class="form-control" id="buscador" oninput="filtrarProducto()">
     </div>
     
-    <div class="container">
+    <div class="container-fluid">
         <div class="row" id="productos-container">
             <!-- Los productos se renderizaran acá -->
         </div>
     </div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
+    <button type="button" class="btn btn-primary fixed-bottom" data-toggle="modal" data-target="#miModal">
         Abrir modal
     </button>
     <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

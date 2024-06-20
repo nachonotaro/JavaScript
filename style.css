@@ -19,6 +19,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-bottom: 50px;
 }
 .imgnes {
     display: flex;
@@ -59,3 +60,8 @@ p {
     transition: background-color 0.3s;
     font-weight: bold;
 }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    margin-bottom: 50px;
+}
+

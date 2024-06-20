@@ -4,45 +4,51 @@
     "productos":  [
     {
         "id": 1,
+        "img": "imagenes/heno.jpg",
         "nombre": "Heno",
-        "descripcion": "Laptop de 14 pulgadas con procesador Intel i5",
-        "precio": 750,
+        "descripcion": "«El encanto de estar fresco y perfumado.»",
+        "precio": 4195,
         "stock": 50
     },
     {
         "id": 2,
+        "img": "imagenes/lavanda.jpg",
         "nombre": "Lavanda",
-        "descripcion": "Smartphone de 6.5 pulgadas con 128GB de almacenamiento",
-        "precio": 500,
+        "descripcion": "«Frescas suaves y vitales. Frescura diaria para toda la familia»",
+        "precio": 4195,
         "stock": 200
     },
     {
         "id": 3,
+        "img": "imagenes/inglesa.jpg",
         "nombre": "Inglesa",
-        "descripcion": "Auriculares Bluetooth con cancelación de ruido",
-        "precio": 100,
+        "descripcion": "«Frescas suaves y vitales. Frescura diaria para toda la familia»",
+        "precio": 4195,
         "stock": 150
     },
     {
         "id": 4,
-        "nombre": "X",
-        "descripcion": "Monitor 24 pulgadas Full HD",
-        "precio": 180,
+        "img": "imagenes/ambre.jpg",
+        "nombre": "Ambre",
+        "descripcion": "«Frescas suaves y vitales. Frescura diaria para toda la familia»",
+        "precio": 4195,
         "stock": 80
     },
     {
         "id": 5,
-        "nombre": "Y",
-        "descripcion": "Teclado mecánico con retroiluminación RGB",
-        "precio": 70,
+        "img": "imagenes/flower.jpg",
+        "nombre": "Flowers",
+        "descripcion": "«Frescas suaves y vitales. Frescura diaria para toda la familia»",
+        "precio": 4195,
         "stock": 120
     },
     {
         "id": 6,
-        "nombre": "Z",
-        "descripcion": "Teclado mecánico con retroiluminación RGB",
-        "precio": 704,
-        "stock": 1200
+        "img": "imagenes/repewels.jpg",
+        "nombre": "Repewels",
+        "descripcion": "«Protección total contra los mosquitos durante 6 horas, uso directo sobre la piel y la ropa con una delicada fragancia cosmética. Seguro para vos y toda tu familia»",
+        "precio": 5340,
+        "stock": 1200   
     }
 ]
 }
